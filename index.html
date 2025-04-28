@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Descubra a importância da Física no mundo moderno.">
+  <meta name="description" content="Por que estudar Física? Entenda a importância da Física no mundo moderno.">
   <meta name="author" content="João Pedro De Jesus Rodrigues">
   <title>Por que Estudar Física?</title>
   <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/8/8b/Atom_Diagram.png" type="image/png">
 
   <style>
-    /* Animações */
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -18,95 +17,62 @@
     body {
       font-family: 'Helvetica Neue', Arial, sans-serif;
       margin: 0;
+      line-height: 1.6;
       background-color: #eef2f7;
       color: #333;
-      line-height: 1.6;
-      animation: fadeIn 1s ease;
+      animation: fadeIn 1.5s ease;
     }
 
     .cover-image {
       width: 100%;
       height: 300px;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/F%C3%ADsica_-_F%C3%ADsica_cl%C3%A1ssica_e_moderna.jpg') no-repeat center center/cover;
-    }
-
-    .cover-image::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 300px;
-      background: url('https://images.unsplash.com/photo-1581093588401-7e0cdfbb6791?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-      opacity: 0;
-      transition: opacity 0.5s;
+      background-image: url('https://images.unsplash.com/photo-1600803907084-9d7e99c4b15b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
     }
 
     .container {
       max-width: 900px;
-      margin: 20px auto;
-      padding: 30px 20px;
+      margin: 0 auto;
+      padding: 40px 20px;
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       animation: fadeIn 2s ease;
     }
 
-    h1, h2, h3 {
-      text-align: center;
+    h1, h2 {
       color: #2c3e50;
-    }
-
-    h1 {
-      font-size: 2.5em;
-    }
-
-    h2 {
-      margin-top: 40px;
-      font-size: 1.8em;
+      text-align: center;
     }
 
     h3 {
-      color: #666;
+      text-align: center;
+      color: #555;
       margin-bottom: 30px;
-      font-size: 1.2em;
     }
 
     p {
       text-align: justify;
       margin-bottom: 20px;
-      font-size: 1.1em;
+    }
+
+    .section {
+      margin-top: 40px;
     }
 
     .button-container {
       text-align: center;
-      margin: 40px 0;
+      margin: 30px 0;
     }
 
     .button-container img {
-      width: 180px;
-      height: 180px;
-      margin: 10px auto;
-      display: block;
+      width: 200px;
+      height: 200px;
       transition: transform 0.3s;
     }
 
     .button-container img:hover {
-      transform: scale(1.1);
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background-color: #3498db;
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 8px;
-      transition: background-color 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #2980b9;
+      transform: scale(1.05);
     }
 
     footer {
@@ -114,66 +80,53 @@
       padding: 20px;
       font-size: 14px;
       color: #777;
-      margin-top: 40px;
     }
 
-    /* Responsivo */
     @media (max-width: 768px) {
-      .cover-image, .cover-image::after {
+      .cover-image {
         height: 200px;
       }
-      h1 { font-size: 2em; }
-      h2 { font-size: 1.5em; }
-      .container { margin: 10px; padding: 20px; }
+
+      .container {
+        padding: 20px 10px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
     }
   </style>
-
-  <script>
-    // Se a imagem principal falhar, troca para a imagem reserva
-    window.addEventListener('load', function() {
-      const cover = document.querySelector('.cover-image');
-      const img = new Image();
-      img.src = 'https://upload.wikimedia.org/wikipedia/commons/3/3f/F%C3%ADsica_-_F%C3%ADsica_cl%C3%A1ssica_e_moderna.jpg';
-      img.onerror = function() {
-        cover.style.backgroundImage = "url('https://images.unsplash.com/photo-1581093588401-7e0cdfbb6791?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')";
-      }
-    });
-  </script>
 </head>
-
 <body>
 
-  <div class="cover-image" loading="lazy"></div>
+  <div class="cover-image"></div>
 
   <div class="container">
     <h1>Por que Estudar Física?</h1>
     <h3>Autor: João Pedro De Jesus Rodrigues | UESB - Universidade Estadual da Bahia | jesusrodriguesjoaopedro@gmail.com</h3>
 
-    <div class="button-container">
-      <p>📲 Escaneie o QR Code para responder:</p>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.menti.com/al393wu6gn4h&size=200x200" alt="QR Code para responder" loading="lazy">
-      <br>
-      <a href="https://www.menti.com/al393wu6gn4h" class="btn" target="_blank" rel="noopener noreferrer">Responder Agora</a>
-    </div>
-
     <div class="section">
       <h2>Introdução</h2>
-      <p>A Física é uma ciência fundamental para compreender o universo em que vivemos. Ela estuda a natureza e seus fenômenos, desde partículas subatômicas até galáxias. Estudar Física é essencial para o avanço tecnológico e para o desenvolvimento crítico e analítico da realidade.</p>
+      <p>A Física é uma ciência fundamental para compreender o universo em que vivemos. Ela estuda a natureza e os seus fenômenos, desde as partículas subatômicas até as galáxias mais distantes. Entender Física é essencial para o avanço tecnológico, científico e para o desenvolvimento de uma visão crítica e analítica da realidade.</p>
     </div>
 
     <div class="section">
-      <h2>Os Benefícios de Estudar Física</h2>
-      <p>Estudar Física desenvolve habilidades analíticas, raciocínio lógico e criatividade. Além disso, proporciona base sólida para carreiras em engenharia, tecnologia, pesquisa científica, medicina, entre outras. Estimula também a curiosidade intelectual e o desejo de aprender continuamente.</p>
+      <h2>Benefícios de Estudar Física</h2>
+      <p>Estudar Física desenvolve habilidades analíticas, raciocínio lógico e criatividade na solução de problemas. Além disso, proporciona uma base sólida para carreiras em engenharia, tecnologia, pesquisa científica, medicina, entre outras áreas. A Física também estimula a curiosidade intelectual e o desejo constante de aprender mais sobre o funcionamento do mundo.</p>
     </div>
 
     <div class="section">
       <h2>Aplicações da Física</h2>
-      <p>A Física está presente em quase todos os aspectos da vida moderna: novos materiais, desenvolvimento de equipamentos médicos, geração de energia, telecomunicações, exploração espacial, transportes e muito mais. Cada inovação tecnológica tem raízes na Física.</p>
+      <p>A Física está presente em quase todos os aspectos da vida moderna: na criação de novos materiais, no desenvolvimento de equipamentos médicos, na geração de energia, nas telecomunicações, na exploração espacial e até mesmo em inovações no transporte. Cada avanço tecnológico que transforma nossas vidas tem, de alguma forma, suas raízes na Física.</p>
     </div>
 
     <div class="section">
       <h2>Conclusão</h2>
-      <p>Estudar Física é muito mais do que aprender fórmulas. É compreender as leis que regem o universo e usá-las para construir um futuro melhor. A Física nos ensina a pensar criticamente, resolver problemas complexos e buscar a verdade por meio da observação e da experimentação.</p>
+      <p>Estudar Física é muito mais do que aprender fórmulas ou resolver problemas. É compreender os princípios que regem a natureza e usar esse conhecimento para melhorar o mundo. A Física nos ensina a pensar de maneira crítica, a resolver problemas complexos e a buscar a verdade através da observação e da experimentação. Em um mundo cada vez mais tecnológico, a Física é a chave para o futuro.</p>
     </div>
 
     <div class="section">
@@ -184,6 +137,14 @@
         - Feynman, R. P. <i>O que é Física?</i>
       </p>
     </div>
+
+    <!-- QR Code Final -->
+    <div class="section" style="text-align: center; margin-top: 50px;">
+      <h2>📲 Participe do nosso Questionário!</h2>
+      <p>Escaneie o QR Code abaixo:</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.menti.com/al393wu6gn4h&size=200x200" alt="QR Code para o questionário" style="margin-top: 20px; width: 200px; height: 200px;">
+    </div>
+
   </div>
 
   <footer>
